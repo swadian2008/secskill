@@ -1,0 +1,63 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    &lt;!&ndash; 数据库驱动&ndash;&gt;
+    &lt;!&ndash;<classPathEntry  location="/这里写后面那个jar的地址/mysql-connector-java-5.1.30.jar"/>&ndash;&gt;
+    <context id="DB2Tables"  targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            &lt;!&ndash; 是否去除自动生成的注释 true：是 ： false:否 &ndash;&gt;
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        &lt;!&ndash;数据库链接URL，用户名、密码 &ndash;&gt;
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/seckill" userId="root" password="root">
+        </jdbcConnection>
+
+        &lt;!&ndash;类型转换&ndash;&gt;
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        &lt;!&ndash; 生成模型的包名和位置&ndash;&gt;
+        &lt;!&ndash;targetPackage="PO在项目中的package路径，例：com.frank.test.pro.po" targetProject="项目java包绝对路径 例如：/test-pro/src/main/java"&ndash;&gt;
+        <javaModelGenerator targetPackage="secskill.dataobject" targetProject="D:\IdeaWorkSpase\seckill\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        &lt;!&ndash; 生成Mapper.xml的包名和位置&ndash;&gt;
+        <sqlMapGenerator targetPackage="mapping" targetProject="D:\IdeaWorkSpase\seckill\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        &lt;!&ndash; 生成映Mapperr的包名和位置&ndash;&gt;
+        <javaClientGenerator type="XMLMAPPER" targetPackage="secskill.dao" targetProject="D:\IdeaWorkSpase\seckill\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        &lt;!&ndash; 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 &ndash;&gt;
+        <table tableName="promo" domainObjectName="PromoDO"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        &lt;!&ndash;<table tableName="item_stock" domainObjectName="ItemStockDO"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>&ndash;&gt;
+
+    </context>
+</generatorConfiguration>
+-->
