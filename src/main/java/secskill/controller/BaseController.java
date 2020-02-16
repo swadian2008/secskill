@@ -1,6 +1,7 @@
 package secskill.controller;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import secskill.error.BussinessException;
@@ -16,7 +17,7 @@ import java.util.Map;
  * @date 2019/11/18/018 23:23
  * @Version 1.0
  */
-
+@ControllerAdvice
 public class BaseController {
 
     public final static String CONTENT_TYPE_FORMED ="application/x-www-form-urlencoded";// application/x-www-form-urlencoded

@@ -22,6 +22,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
+import static secskill.controller.BaseController.CONTENT_TYPE_FORMED;
+
 /**
  * @author Administrator
  * @date 2019/11/18/018 21:24
@@ -30,7 +32,7 @@ import java.util.Random;
 @RestController
 @RequestMapping("/user")
 @CrossOrigin(allowCredentials = "true",allowedHeaders = "*") // 跨域请求，防止ajax跨域请求报错标签，值得研究
-public class UserController extends BaseController{
+public class UserController {
 
     @Autowired
     private UserService userService;
@@ -113,7 +115,7 @@ public class UserController extends BaseController{
 
     @RequestMapping("/get")
     public CommonReturnType getUserInfo(@RequestParam(name="id") Integer id) throws BussinessException {
-        UserModel user = null;//userService.getUserInfoById(id);
+        UserModel user = userService.getUserInfoById(id);
         // 模型转换
         if(user == null){
             throw new BussinessException(EmBusinessError.USER_NOT_EXIST);

@@ -22,6 +22,8 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static secskill.controller.BaseController.CONTENT_TYPE_FORMED;
+
 /**
  * @author Administrator
  * @date 2019/11/25/025 20:55
@@ -30,7 +32,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/item")
 @CrossOrigin(allowCredentials = "true",allowedHeaders = "*") // 跨域请求，防止ajax跨域请求报错标签，值得研究
-public class ItemController extends BaseController {
+public class ItemController {
 
     @Autowired
     private ItemService itemService;

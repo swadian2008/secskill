@@ -16,6 +16,8 @@ import secskill.server.model.UserModel;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static secskill.controller.BaseController.CONTENT_TYPE_FORMED;
+
 /**
  * @author Administrator
  * @date 2019/11/29/029 20:35
@@ -24,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/order")
 @CrossOrigin(allowCredentials = "true",allowedHeaders = "*")
-public class OrderController extends BaseController {
+public class OrderController {
 
     @Autowired
     private OrderService orderService;

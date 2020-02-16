@@ -1,6 +1,5 @@
 package secskill.dao;
 
-import org.apache.ibatis.annotations.Mapper;
 import secskill.dataobject.UserPasswordDO;
 
 public interface UserPasswordDOMapper {

@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="secskill.dao.PromoDOMapper">
 
+  <resultMap id="BaseResultMap" type="secskill.dataobject.PromoDO">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="promoName" jdbcType="VARCHAR" property="promo_name" />
+    <result column="startDate" jdbcType="VARCHAR" property="start_date" />
+    <result column="endDate" jdbcType="VARCHAR" property="end_date" />
+    <result column="itemId" jdbcType="INTEGER" property="item_id" />
+    <result column="promoItemPrice" jdbcType="DOUBLE" property="promo_item_price" />
+  </resultMap>
+
   <sql id="Base_Column_List">
     id, promo_name, start_date,end_date, item_id, promo_item_price
   </sql>
