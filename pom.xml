@@ -76,18 +76,18 @@
             </plugin>
 
             <!--代码自动生成器-->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.5</version>
                 <dependencies>
-                    <!--导入核心代码-->
+                    &lt;!&ndash;导入核心代码&ndash;&gt;
                     <dependency>
                         <groupId>org.mybatis.generator</groupId>
                         <artifactId>mybatis-generator-core</artifactId>
                         <version>1.3.5</version>
                     </dependency>
-                    <!--支持mysql数据库-->
+                    &lt;!&ndash;支持mysql数据库&ndash;&gt;
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
@@ -104,15 +104,15 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!--允许移动生成后的文件-->
+                    &lt;!&ndash;允许移动生成后的文件&ndash;&gt;
                     <verbose>true</verbose>
-                    <!--允许覆盖文件，实际工作过程中设置为false-->
+                    &lt;!&ndash;允许覆盖文件，实际工作过程中设置为false&ndash;&gt;
                     <overwrite>false</overwrite>
                     <configurationFile>
                         D:\IdeaWorkSpase\seckill\src\main\resources\mybatis-generator.xml
                     </configurationFile>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
     
