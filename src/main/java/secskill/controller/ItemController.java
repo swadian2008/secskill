@@ -62,9 +62,6 @@ public class ItemController {
     public CommonReturnType getItem(@RequestParam(name = "id") Integer id) throws BussinessException {
         ItemModel itemModel = itemService.getItemById(id);
         ItemVO itemVO = convertVOFromModel(itemModel);
-        /*if(6>5){
-            throw new BussinessException(EmBusinessError.STOCK_NOT_ENOUGH,"自定义异常！");
-        }*/
         return CommonReturnType.create(itemVO);
     }
 

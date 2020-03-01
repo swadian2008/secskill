@@ -22,11 +22,17 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
 
-  <select id="selectByItemId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from promo
-    where item_id = #{itemId,jdbcType=INTEGER}
+  <select id="selectByItemId" parameterType="java.lang.Integer" resultType="secskill.dataobject.PromoDO">
+    SELECT
+      id,
+      promo_name  promoName,
+      start_date  startDate,
+      end_date  endDate,
+      item_id  itemId,
+      promo_item_price  promoItemPrice
+    FROM promo
+    WHERE
+      item_id = #{itemId,jdbcType=INTEGER}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
